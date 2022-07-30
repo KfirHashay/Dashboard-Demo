@@ -1,0 +1,167 @@
+// Misc.
+$misc: ();
+
+// Duration.
+$duration: ();
+
+// Transition.
+$transition: (
+  admin-side-bar: (
+    tran-01: all 0.3s ease,
+  ),
+);
+
+// Size.
+$size: (
+  font-size-xsm: 1.2rem,
+  font-size-sm: 1.6rem,
+  font-size-md: 2.4rem,
+  font-size-lg: 3rem,
+  font-size-xl: 4rem,
+  gap: 2rem,
+  margin-sm: 2rem,
+  margin-md: 3rem,
+  item-min-height-sm: 20rem,
+  item-min-height-md: 30rem,
+  dark-light: (
+    size: 1.7rem,
+  ),
+  nav: (
+    nav-size: 60px,
+    border-radius-nav: 8px,
+    speed-nav: 1200ms,
+  ),
+);
+
+// Font.
+$font: (
+  nav: (),
+);
+
+// Palette.
+$palette: (
+  //////////////////////////////
+  // Light
+  //////////////////////////////
+  body: rgb(250 251 251 / 1),
+  bg: #f3f6fa,
+  fg: #7c8081,
+  fg-bold: #3d4449,
+  border: transparentize(#7c8081, 0.8),
+  //light
+  light-blue: #07b3f9,
+  light-grey: rgba(150, 150, 150, 0.8),
+  //blue
+  calm-blue: #1369ce,
+  //////////////////////////////
+  //Dark
+
+ 
+  //////////////////////////////
+  body-dark: rgb(32 35 42 / 1),
+  bg-dark: #1f1d2b,
+  fg-dark: #b4b4b4,
+  fg-bold-dark: #9fa3a6,
+  border-dark: transparentize(#ffffff, 0.7),
+  //light
+  light-blue-dark: #087caa,
+  light-grey-dark: rgba(119, 119, 119, 0.8),
+  //blue
+  calm-blue-dark: #0e519e,
+  //////////////////////////////
+  //Dark End
+  //////////////////////////////
+  nav:
+    (
+      nav-color: #fafbff,
+      side-nav-color: #ffffff,
+      text-color: rgb(0, 0, 0),
+      side-nav-text-color: #ffffff,
+      bg-nav: #fffefc,
+      bg-secondary-nav: #ffffff,
+      bg-accent-nav: #e7e7e7,
+      text-color-nav: #494949,
+      icon-fill: #935bd3,
+      border-nav: 0.1px solid #dedede,
+    ),
+  nav-dark: (
+    nav-color: #242526,
+    side-nav-color: #242526,
+    text-color: #fff,
+    bg-nav: #18191a,
+    bg-secondary-nav: #2b2b2b,
+    bg-accent-nav: #222222,
+    text-color-nav: #b4b4b4,
+    icon-fill-dark: #c4c4c4,
+    border-nav: 0.1px solid #dedede,
+  ),
+  admin-nav: (
+    body-color: #e4e9f7,
+    sidebar-color: #fff,
+    primary-color: #695cfe,
+    primary-color-light: #f6f5ff,
+    toggle-color: #ddd,
+    text-color: #707070,
+    fill: #1f1c2e,
+  ),
+  admin-nav-dark: (
+    body-color: #18191a,
+    sidebar-color: rgb(51 55 62 / 1),
+    primary-color: #3a3b3c,
+    primary-color-light: #3a3b3c,
+    toggle-color: #fff,
+    text-color: rgb(255 255 255 / 1),
+  ),
+  admin: (
+    main-color: #1f1c2e,
+    app-container: #f3f6fd,
+    light-font: rgba(255, 255, 255, 0.8),
+    search-area-bg: #f3f6fd,
+    message-box-hover: #fafcff,
+    message-box-border: #e9ebf0,
+  ),
+  admin-dark: (
+    main-color: #fff,
+    app-container: #1f1d2b,
+    light-font: rgba(255, 255, 255, 0.8),
+    search-area-bg: #1f1d2b,
+    message-box-hover: #243244,
+    message-box-border: rgba(255, 255, 255, 0.1),
+  ),
+
+  login: (
+    bg: #f5f6f7,
+    bg-alt: #eeeeee,
+    fg-bold: #3d4449,
+    back-input: rgb(236, 236, 236),
+  ),
+  login-dark: (
+    bg: #242526,
+    bg-alt: #313131,
+    fg-bold: #8c8d8d,
+    back-input: #3b3b3b,
+  ),
+  blog: (
+    light-color: #3d3d3d,
+    light-color-alt: rgba(0, 0, 0, 0.6),
+    primary-background-color: #fff,
+    secondary-background-color: #f1f1f1,
+    hover-light-color: #fff,
+    gradient-color:
+      linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b),
+    transparent-light-color: rgba(0, 0, 0, 0.1),
+    transparent-dark-color: #f1f1f1,
+  ),
+  blog-dark: (
+    light-color: #fff,
+    light-color-alt: #afb6cd,
+    primary-background-color: #131417,
+    secondary-background-color: #252830,
+    hover-light-color: #fff,
+    hover-dark-color: #131417,
+    gradient-color:
+      linear-gradient(115deg, #4fcf70, #fad648, #a767e5, #12bcfe, #44ce7b),
+    transparent-light-color: rgba(255, 255, 255, 0.05),
+    transparent-dark-color: rgba(0, 0, 0, 0.75),
+  )
+);

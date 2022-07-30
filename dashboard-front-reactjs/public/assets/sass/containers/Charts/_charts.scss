@@ -1,0 +1,20 @@
+.charts_container {
+  margin: 1rem;
+  margin-top: 6rem;
+  padding: 2.5rem;
+  border-radius: 1.5rem;
+  @media (min-width: 768px) {
+    margin: 2.5rem;
+  }
+
+  @include light {
+    background-color: rgb(255 255 255);
+  }
+  @include dark {
+    background-color: rgb(51 55 62);
+  }
+
+  .component {
+    width: 100%;
+  }
+}

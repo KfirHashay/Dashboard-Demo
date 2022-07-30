@@ -1,0 +1,17 @@
+.gridEmployeeProfile {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  img {
+    border-radius: 9999px;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.gridEmployeeCountry {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}

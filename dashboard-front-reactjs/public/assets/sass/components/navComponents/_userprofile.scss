@@ -1,0 +1,132 @@
+.UserProfile_Container {
+  z-index: 10000;
+  position: absolute;
+  right: 0.25rem;
+  top: 4rem;
+  padding: 2rem /* 32px */;
+  border-radius: 0.5rem /* 8px */;
+  width: 24rem;
+
+  @include light {
+    background-color: rgb(255 255 255);
+  }
+  @include dark {
+    background-color: rgb(66 70 77);
+  }
+}
+
+.UserProfile_Header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  p {
+    font-weight: 600;
+    font-size: 1.125rem /* 18px */;
+    line-height: 1.75rem /* 28px */;
+    @include dark {
+      color: rgb(229 231 235);
+    }
+  }
+}
+
+.UserProfile_Details {
+  display: flex;
+  gap: 1.25rem /* 20px */;
+  align-items: center;
+  margin-top: 1.5rem /* 24px */;
+  border-color: rgba(0, 0, 0, 0.1);
+  border-bottom-width: 1px;
+  padding-bottom: 1.5rem;
+
+  img {
+    border-radius: 9999px;
+    height: 6rem;
+    width: 6rem;
+  }
+
+  .p-1 {
+    font-weight: 600;
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+
+    @include dark {
+      color: rgb(229 231 235);
+    }
+  }
+  .p-2 {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    @include light {
+      color: rgb(107 114 128);
+    }
+
+    @include dark {
+      color: rgb(156 163 175);
+    }
+  }
+  .p-3 {
+    font-weight: 600;
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    @include light {
+      color: rgb(107 114 128);
+    }
+
+    @include dark {
+      color: rgb(156 163 175);
+    }
+  }
+}
+
+.Navigation {
+  display: flex;
+  gap: 1.25rem /* 20px */;
+  border-bottom-width: 1px;
+  border-color: rgba(0, 0, 0, 0.1);
+  padding: 1rem /* 16px */;
+  border-radius: 0.5rem /* 8px */;
+
+  cursor: pointer;
+  &:hover {
+    @include light {
+      background-color: rgb(236, 236, 236);
+    }
+
+    @include dark {
+      .p-1 {
+        color: black;
+      }
+      .p-1 {
+        color: rgb(107 114 128);
+      }
+
+      background-color: rgb(255, 255, 255);
+    }
+  }
+
+  button {
+    font-size: 1.25rem /* 20px */;
+    line-height: 1.75rem /* 28px */;
+    border-radius: 0.5rem /* 8px */;
+    padding: 0.75rem /* 12px */;
+    &:hover {
+      background-color: rgb(247 247 247);
+    }
+  }
+
+  .p-1 {
+    font-weight: 600;
+    @include dark {
+      color: rgb(229 231 235);
+    }
+  }
+  .p-2 {
+    font-size: 0.875rem /* 14px */;
+    line-height: 1.25rem /* 20px */;
+    color: rgb(107 114 128);
+
+    @include dark {
+      color: rgb(156 163 175);
+    }
+  }
+}

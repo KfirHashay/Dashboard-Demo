@@ -1,0 +1,24 @@
+.customerGridImage {
+  display: flex;
+  gap: 1rem;
+
+  img {
+    border-radius: 9999px;
+    width: 2.5rem;
+    height: 2.5rem;
+  }
+}
+
+.customerGridStatus {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  align-items: center;
+  text-transform: capitalize;
+  color: rgb(55 65 81);
+  .tag {
+    border-radius: 9999px;
+    height: 0.75rem;
+    width: 0.75rem;
+  }
+}

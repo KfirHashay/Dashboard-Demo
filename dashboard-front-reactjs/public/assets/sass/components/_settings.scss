@@ -1,0 +1,133 @@
+.settings_container {
+  font-family: "Open Sans", sans-serif;
+
+  width: 100vw;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+
+  animation: background-fade 4s forwards;
+}
+
+@keyframes background-fade {
+  99.9% {
+    background: none;
+  }
+  100% {
+    backdrop-filter: blur(2px);
+  }
+}
+.settings_panel {
+  box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+
+  margin-left: auto;
+  margin-right: 0;
+  height: 100vh;
+  width: 400px;
+  transform: translateX(0%);
+  @include light {
+    background-color: rgb(255 255 255);
+  }
+  @include dark {
+    background-color: rgb(72, 75, 82);
+
+    color: rgb(229 231 235);
+  }
+
+  .closeSettingsBtn {
+    font-size: 1.275rem;
+    line-height: 0.651rem;
+    border-radius: 50%;
+
+    padding: 0.75rem /* 12px */;
+    &:hover {
+      background-color: rgb(247 247 247);
+      box-shadow: rgb(113 122 131 / 11%) 0px 7px 30px 0px;
+    }
+  }
+}
+.settings_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin-left: 1rem;
+}
+
+.set_text {
+  font-weight: 500;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.settings_theme {
+  flex-direction: column;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  margin-left: 1rem;
+
+  p {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+
+.settings_theme_input_light {
+  margin-top: 1rem /* 16px */;
+  label {
+    margin-left: 0.5rem /* 8px */;
+    cursor: pointer;
+  }
+}
+.settings_theme_input_dark {
+  margin-top: 0.5rem /* 8px */;
+
+  label {
+    margin-left: 0.5rem /* 8px */;
+    cursor: pointer;
+  }
+}
+
+.settings_theme_color {
+  padding: 1rem;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin-left: 1rem;
+  p {
+    font-weight: 600;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
+}
+.colors_container {
+  gap: 0.75rem;
+  display: flex;
+
+  .colors {
+    position: relative;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    button {
+      height: 2.5rem;
+      width: 2.5rem;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .check {
+      margin-left: 0.5rem;
+      font-size: 1.5rem;
+      line-height: 2rem;
+      color: rgb(255 255 255);
+    }
+
+    .block {
+      display: block;
+    }
+    .hidden {
+      display: none;
+    }
+  }
+}

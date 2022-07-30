@@ -1,0 +1,152 @@
+.active_sidebar {
+  width: 18rem;
+  position: fixed;
+  @include light {
+    color: _palette(admin-nav, sidebar-color);
+    background-color: _palette(admin-nav, sidebar-color);
+  }
+  @include dark {
+    color: _palette(admin-nav-dark, sidebar-color);
+    background-color: _palette(admin-nav-dark, sidebar-color);
+  }
+
+  @media screen and (max-width: 800px) {
+    z-index: 10000000;
+  }
+  font-family: "Open Sans", sans-serif;
+}
+
+.hidden_sidebar {
+  width: 0;
+  height: 0;
+  @include light {
+    color: _palette(admin-nav, sidebar-color);
+  }
+  @include dark {
+    color: _palette(admin-nav-dark, sidebar-color);
+  }
+}
+
+.sidebar_container {
+  box-shadow: 21px 0px 10px -26px rgba(0, 0, 0, 0.45);
+
+  margin-left: 0.75rem;
+  height: 100vh;
+  padding-bottom: 2.5rem /* 40px */;
+  overflow: auto;
+  @include light {
+    background: _palette(admin-nav, sidebar-color);
+  }
+  @include dark {
+    background-color: _palette(admin-nav-dark, sidebar-color);
+  }
+  @media (min-width: 768px) {
+    overflow: hidden;
+
+    &:hover {
+      overflow: auto;
+    }
+  }
+}
+
+.sidebar_head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.sidebar_links {
+  margin-top: 2.5rem;
+
+  a:hover {
+    @include light {
+      background-color: rgb(236, 236, 236);
+    }
+    @include dark {
+      color: black;
+      background-color: rgb(255, 255, 255);
+    }
+  }
+}
+
+.sidebar_logo {
+  align-items: center;
+  display: flex;
+
+  font-size: 20px;
+  font-weight: 700;
+  line-height: 1.75rem;
+  letter-spacing: -0.025em;
+
+  gap: 0.75rem;
+  margin-left: 0.75rem;
+  margin-top: 1rem;
+
+  @include light {
+    color: rgb(15 23 42);
+  }
+  @include dark {
+    color: _palette(admin-nav-dark, text-color);
+  }
+}
+
+.sidebar_cancelBtn {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+
+  border-radius: 9999px;
+  @include light {
+    color: _palette(admin-nav, text-color);
+  }
+  @include dark {
+    color: _palette(admin-nav-dark, text-color);
+  }
+
+  margin-top: 1rem;
+
+  @media (min-width: 768px) {
+    display: none;
+  }
+
+  display: block;
+}
+
+.links {
+  color: rgb(156 163 175 / 1);
+  margin: 0.75rem;
+  margin-top: 1rem;
+  text-transform: uppercase;
+}
+
+.activeLink {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  color: rgb(255 255 255 / 1);
+}
+
+.normalLink {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  padding-left: 1rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.625rem;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+
+  @include light {
+    color: rgb(55 65 81 / 1);
+  }
+  @include dark {
+    color: rgb(229 231 235 / 1);
+  }
+}
+
+.capitalize {
+  text-transform: capitalize;
+}

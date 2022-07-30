@@ -1,0 +1,26 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
+
+@import url("https://cdn.syncfusion.com/ej2/material.css");
+
+@import "../../public/assets/sass/libs/_vars.scss";
+@import "../../public/assets/sass/libs/_functions.scss";
+@import "../../public/assets/sass/libs/_mixins.scss";
+
+@import "../../public/assets/sass/base/_base.scss";
+
+@import "../../public/assets/sass/containers/_admin.scss";
+@import "../../public/assets/sass/containers/_main.scss";
+@import "../../public/assets/sass/containers/_container.scss";
+@import "../../public/assets/sass/containers/_orders.scss";
+@import "../../public/assets/sass/containers/_employee";
+@import "../../public/assets/sass/containers/_customers";
+@import "../../public/assets/sass/containers/_colorpicker";
+@import "../../public/assets/sass/containers/Charts/_charts";
+
+@import "../../public/assets/sass/components/_settings.scss";
+@import "../../public/assets/sass/components/_header.scss";
+@import "../../public/assets/sass/components/_navbar.scss";
+@import "../../public/assets/sass/components/navComponents/chat";
+@import "../../public/assets/sass/components/navComponents/notfication";
+@import "../../public/assets/sass/components/navComponents/userprofile";
+@import "../../public/assets/sass/components/_sidebar.scss";

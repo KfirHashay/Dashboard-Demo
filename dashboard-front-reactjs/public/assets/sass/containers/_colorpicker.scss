@@ -1,0 +1,19 @@
+.color_picker {
+  text-align: center;
+
+  .inner_div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5rem;
+    flex-wrap: wrap;
+
+    .Pallete.Picker {
+      font-size: 1.5rem;
+      line-height: 2rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+    }
+  }
+}

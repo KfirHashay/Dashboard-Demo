@@ -1,0 +1,86 @@
+.navbar {
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem /* 8px */;
+  position: relative;
+
+  @media (min-width: 768px) {
+    margin-left: 1.5rem /* 24px */;
+    margin-right: 1.5rem /* 24px */;
+  }
+}
+
+.navBtn {
+  position: relative;
+  font-size: 1.275rem;
+  line-height: 0.651rem;
+  border-radius: 50%;
+
+  padding: 0.75rem /* 12px */;
+}
+.navBtn:hover {
+  background-color: rgb(229, 229, 229);
+}
+
+.navBtnSpan {
+  position: absolute;
+  display: inline-flex;
+  border-radius: 50%;
+
+  height: 0.5rem /* 8px */;
+  width: 0.5rem /* 8px */;
+  right: 0.5rem /* 8px */;
+  top: 0.5rem /* 8px */;
+}
+
+.navbar_icons {
+  display: flex;
+}
+
+.ProfileBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem /* 8px */;
+  cursor: pointer;
+  padding: 0.25rem /* 4px */;
+  &:hover {
+    @include light {
+      background-color: rgb(229, 229, 229);
+    }
+    @include dark {
+      background-color: rgb(247 247 247);
+    }
+  }
+  border-radius: 0.5rem;
+
+  img {
+    border-radius: 9999px;
+    width: 2rem /* 32px */;
+    height: 2rem /* 32px */;
+  }
+  p {
+    .span-1 {
+      color: rgb(156 163 175);
+      font-size: 14px;
+    }
+    .span-2 {
+      color: rgb(156 163 175);
+      font-size: 14px;
+      font-weight: 700;
+      margin-left: 0.25rem;
+    }
+  }
+}
+
+.button {
+  padding: 0.75rem /* 12px */;
+
+  font-size: 1.275rem;
+  line-height: 0.651rem;
+  &:hover {
+    filter: drop-shadow(0 20px 13px rgb(0 0 0 / 0.03))
+      drop-shadow(0 8px 5px rgb(0 0 0 / 0.08));
+    background-color: rgb(229, 229, 229);
+  }
+}

@@ -1,0 +1,17 @@
+.gridOrderImage {
+  border-radius: 0.75rem;
+  height: 5rem;
+  @media (min-width: 768px) {
+    margin-left: 0.75rem;
+  }
+}
+
+.gridOrderStatus {
+  color: rgb(255 255 255);
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  text-transform: capitalize;
+  border-radius: 1rem;
+}

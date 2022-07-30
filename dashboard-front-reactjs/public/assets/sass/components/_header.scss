@@ -1,0 +1,55 @@
+.header {
+  margin-bottom: 2.5rem;
+
+  p:first-child {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
+    color: rgb(156 163 175);
+  }
+  p:nth-child(2) {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 800;
+    letter-spacing: -0.025em;
+    @include light {
+      color: rgb(15 23 42);
+    }
+    @include dark {
+      color: rgb(229 231 235);
+    }
+  }
+}
+
+.chart_header {
+  margin-bottom: 2.5rem;
+  div {
+    .chart {
+      font-size: 1.125rem;
+      line-height: 1.75rem;
+      color: rgb(156 163 175);
+    }
+    .category {
+      font-size: 1.875rem;
+      line-height: 2.25rem;
+      font-weight: 800;
+      letter-spacing: -0.025em;
+      @include light {
+        color: rgb(15 23 42);
+      }
+      @include dark {
+        color: rgb(229 231 235);
+      }
+    }
+  }
+
+  .title {
+    text-align: center;
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.75rem;
+    @include dark {
+      color: rgb(229 231 235);
+    }
+  }
+}
