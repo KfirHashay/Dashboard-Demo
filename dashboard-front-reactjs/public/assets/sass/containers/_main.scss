@@ -226,13 +226,13 @@
         background-color: rgb(51 55 62);
       }
 
-      border-radius: 1rem /* 16px */;
-      padding: 2rem /* 32px */;
-      margin: 0.75rem /* 12px */;
+      border-radius: 1rem;
+      padding: 2rem;
+      margin: 0.75rem;
       display: flex;
       justify-content: center;
       align-items: center;
-      gap: 2.5rem /* 40px */;
+      gap: 2.5rem;
 
       .text {
         p:first-child {
@@ -242,8 +242,8 @@
           @include dark {
             color: rgb(255, 255, 255);
           }
-          font-size: 1.5rem /* 24px */;
-          line-height: 2rem /* 32px */;
+          font-size: 1.5rem;
+          line-height: 2rem;
           font-weight: 600;
         }
         p:nth-child(2) {
@@ -257,13 +257,13 @@
       }
     }
     .card-3_component {
-      width: 10rem /* 160px */;
+      width: 10rem;
     }
   }
 
   .main_cards_2 {
     display: flex;
-    gap: 2.5rem /* 40px */;
+    gap: 2.5rem;
     margin: 1rem;
     flex-wrap: wrap;
     justify-content: center;

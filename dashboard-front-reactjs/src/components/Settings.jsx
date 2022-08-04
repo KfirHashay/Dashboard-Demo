@@ -80,6 +80,7 @@ function Settings({ toggle, check }) {
               value="Light"
               onChange={toggle}
               checked={check === true}
+              onClick={() => setThemeSettings(false)}
             />
 
             <label htmlFor="light">Light</label>
@@ -92,6 +93,7 @@ function Settings({ toggle, check }) {
               value="Dark"
               onChange={toggle}
               checked={check === false}
+              onClick={() => setThemeSettings(false)}
             />
             <label htmlFor="dark">Dark</label>
           </div>
@@ -129,7 +131,10 @@ function Settings({ toggle, check }) {
                   <button
                     type="button"
                     style={{ backgroundColor: item.color }}
-                    onClick={() => setColor(item.color)}
+                    onClick={() => {
+                      setColor(item.color);
+                      setThemeSettings(false);
+                    }}
                   >
                     <BsCheck
                       className={`check ${

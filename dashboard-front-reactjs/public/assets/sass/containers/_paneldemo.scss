@@ -1,0 +1,87 @@
+.Panel-Container {
+  display: flex;
+  flex-direction: column;
+
+  min-height: 100vh;
+
+  @include light {
+    background-color: rgb(255 255 255);
+    //border: 0.1px solid rgb(229, 229, 229);
+  }
+  @include dark {
+    color: rgb(244 244 245);
+    background-color: rgb(51 55 62);
+  }
+}
+
+.Panel {
+  border-radius: 0.2rem;
+  padding-top: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 2rem;
+  height: 100%;
+  width: 100%;
+  max-width: 24rem;
+  border: solid 1px rgb(113 113 122);
+
+  @include light {
+    background-color: rgb(250 251 251);
+  }
+  @include dark {
+    background-color: rgb(32 35 42);
+  }
+
+  h1 {
+    margin-bottom: 2rem;
+    text-align: center;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+    font-weight: 100;
+  }
+
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    margin-bottom: 2rem;
+
+    button {
+      @include light {
+        border: solid 1px rgb(113 113 122);
+      }
+      @include dark {
+        border: solid 1px white;
+      }
+
+      padding-left: 0.5rem;
+      padding-right: 0.5rem;
+      padding-top: 0.25rem;
+      padding-bottom: 0.25rem;
+    }
+  }
+}
+.other {
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 4rem;
+  max-width: 28rem;
+}
+
+.ResizablePanel {
+  position: relative;
+  overflow: hidden;
+  .child {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-bottom: 2rem;
+  }
+
+  .absolute {
+    position: absolute;
+  }
+  .relative {
+    position: relative;
+  }
+}

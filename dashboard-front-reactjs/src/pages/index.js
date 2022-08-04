@@ -2,6 +2,8 @@ export { default as Main } from "./Main";
 export { default as Orders } from "./Orders";
 export { default as Employees } from "./Employees";
 export { default as Customers } from "./Customers";
+export { default as ResizeablePanel } from "./ResizeablePanel";
+
 export { default as Calendar } from "./Calendar";
 export { default as Kanban } from "./Kanban";
 export { default as Editor } from "./Editor";

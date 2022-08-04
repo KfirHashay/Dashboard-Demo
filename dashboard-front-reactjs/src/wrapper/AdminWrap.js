@@ -5,6 +5,7 @@ import { useStateContext } from "../context/ContextProvider";
 import { AnimatePresence } from "framer-motion";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import OutsideAlerter from "../components/OutsideAlerter";
 
 import { Sidebar, NavBar, Settings, Footer } from "../components";
 
@@ -71,7 +72,9 @@ const AppWrap = (Component, idName, classNames) =>
           <div className={activeMenu ? "main_active" : "main_hidden"}>
             {/* NavBar */}
             <div className="nav_container">
-              <NavBar />
+              <OutsideAlerter>
+                <NavBar />
+              </OutsideAlerter>
             </div>
 
             {/* Settings Panel */}

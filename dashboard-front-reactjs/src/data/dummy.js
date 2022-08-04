@@ -508,7 +508,7 @@ export const employeesGrid = [
 export const links = [
   {
     title: "Dashboard",
-    links: [
+    subLinks: [
       {
         name: "main",
         icon: <FiShoppingBag />,
@@ -518,7 +518,7 @@ export const links = [
 
   {
     title: "Pages",
-    links: [
+    subLinks: [
       {
         name: "orders",
         icon: <AiOutlineShoppingCart />,
@@ -531,11 +531,15 @@ export const links = [
         name: "customers",
         icon: <RiContactsLine />,
       },
+      {
+        name: "Panel-demo",
+        icon: <RiContactsLine />,
+      },
     ],
   },
   {
     title: "Apps",
-    links: [
+    subLinks: [
       {
         name: "calendar",
         icon: <AiOutlineCalendar />,
@@ -556,7 +560,7 @@ export const links = [
   },
   {
     title: "Charts",
-    links: [
+    subLinks: [
       {
         name: "line",
         icon: <AiOutlineStock />,

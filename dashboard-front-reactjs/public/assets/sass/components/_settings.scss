@@ -1,10 +1,13 @@
 .settings_container {
   font-family: "Open Sans", sans-serif;
 
-  width: 375px;
+  width: 100%;
   position: fixed;
-  top: 0px;
-  right: 0px;
+
+  top: 0;
+  right: 0;
+
+  background: rgba(0, 0, 0, 0.2);
 }
 
 .settings_panel {

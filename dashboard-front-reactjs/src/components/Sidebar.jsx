@@ -8,6 +8,7 @@ import { FaReact, MdOutlineCancel } from ".";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
 
 import { links } from "../data/dummy";
+// import { motion } from "framer-motion";
 
 const Sidebar = () => {
   const { activeMenu, setActiveMenu, screenSize, currentColor } =
@@ -47,7 +48,7 @@ const Sidebar = () => {
             {links.map((item) => (
               <div key={item.title}>
                 <p className="links">{item.title}</p>
-                {item.links.map((link) => (
+                {item.subLinks.map((link) => (
                   <NavLink
                     to={`/${link.name}`}
                     key={link.name}

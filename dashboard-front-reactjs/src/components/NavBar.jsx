@@ -7,7 +7,6 @@ import {
 } from ".";
 
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-
 import { useStateContext } from "../context/ContextProvider";
 
 import { Chat, Notification, UserProfile } from ".";
