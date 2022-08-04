@@ -8,35 +8,52 @@ import { motion } from "framer-motion";
 import { useStateContext } from "../context/ContextProvider";
 import { themeColors } from "../data/dummy";
 
-const variants = {
-  open: { x: "100%", opactity: 0, rotation: 0.02 },
-  closed: { x: 0, opactity: 1 },
+const sideVariants = {
+  closed: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: -1,
+    },
+  },
+  open: {
+    transition: {
+      staggerChildren: 0.2,
+      staggerDirection: 1,
+    },
+  },
+};
+
+const itemVariants = {
+  closed: {
+    opacity: 0,
+  },
+  open: { opacity: 1 },
 };
 
 function Settings({ toggle, check }) {
-  const { themeSettings, setThemeSettings, currentColor, setColor } =
-    useStateContext();
+  const { setThemeSettings, currentColor, setColor } = useStateContext();
 
   return (
     <motion.div
-      initial="open"
-      animate={themeSettings ? "closed" : "open"}
-      transition={{
-        duration: 0.5,
-        rotation: 0.02,
-        ease: "easeOut",
-        type: "spring",
+      initial={{ width: 0 }}
+      animate={{
+        width: 375,
+        transition: { delay: 0, duration: 0.3, ease: "easeOut" },
       }}
       exit={{
-        x: "100%",
-        opactity: 0,
-        transition: { duration: 0.25, ease: "easeIn" },
+        width: 0,
+        transition: { delay: 0.5, duration: 0.3, ease: "easeIn" },
       }}
-      variants={variants}
       className="settings_container nav-item"
     >
-      <div className="settings_panel">
-        <div className="settings_header">
+      <motion.div
+        initial="closed"
+        animate="open"
+        exit="closed"
+        variants={sideVariants}
+        className="settings_panel"
+      >
+        <motion.div variants={itemVariants} className="settings_header">
           <p className="set_text">Settings </p>
           <button
             type="button"
@@ -46,9 +63,13 @@ function Settings({ toggle, check }) {
           >
             <MdOutlineCancel />
           </button>
-        </div>
+        </motion.div>
 
-        <div className="settings_theme">
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 0.996 }}
+          className="settings_theme"
+        >
           <p>Theme Option</p>
 
           <div className="settings_theme_input_light">
@@ -74,8 +95,12 @@ function Settings({ toggle, check }) {
             />
             <label htmlFor="dark">Dark</label>
           </div>
-        </div>
-        <div className="settings_theme_color">
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 0.996 }}
+          className="settings_theme_color"
+        >
           <p>Language(Coming Soon)</p>
           <div className="settings_theme_input_light">
             <input type="radio" id="heb" name="lan" value="heb" disabled />
@@ -86,8 +111,12 @@ function Settings({ toggle, check }) {
             <input type="radio" id="eng" name="lan" value="eng" disabled />
             <label htmlFor="eng">English</label>
           </div>
-        </div>
-        <div className="settings_theme_color">
+        </motion.div>
+        <motion.div
+          variants={itemVariants}
+          whileHover={{ scale: 0.996 }}
+          className="settings_theme_color"
+        >
           <p>Theme Colors</p>
           <div className="colors_container">
             {themeColors.map((item, index) => (
@@ -112,8 +141,8 @@ function Settings({ toggle, check }) {
               </TooltipComponent>
             ))}
           </div>
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </motion.div>
   );
 }

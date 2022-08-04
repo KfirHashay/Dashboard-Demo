@@ -2,8 +2,6 @@ import React, { useEffect, useState } from "react";
 
 import { useStateContext } from "../context/ContextProvider";
 
-//settings
-
 import { AnimatePresence } from "framer-motion";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
