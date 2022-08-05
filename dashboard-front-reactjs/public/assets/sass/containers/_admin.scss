@@ -71,24 +71,3 @@
     position: static;
   }
 }
-
-.Footer {
-  margin-top: 6rem;
-  p {
-    margin: 5rem;
-    text-align: center;
-    @include light {
-      color: rgb(160, 163, 168);
-    }
-    @include dark {
-      color: rgb(229 231 235);
-    }
-  }
-
-  @include light {
-    background-color: rgb(250 251 251);
-  }
-  @include dark {
-    background-color: rgb(32 35 42);
-  }
-}

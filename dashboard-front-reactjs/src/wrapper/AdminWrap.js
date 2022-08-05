@@ -5,7 +5,7 @@ import { useStateContext } from "../context/ContextProvider";
 import { AnimatePresence } from "framer-motion";
 import { FiSettings } from "react-icons/fi";
 import { TooltipComponent } from "@syncfusion/ej2-react-popups";
-import OutsideAlerter from "../components/OutsideAlerter";
+import { OutsideAlerter } from "../components";
 
 import { Sidebar, NavBar, Settings, Footer } from "../components";
 
@@ -61,7 +61,9 @@ const AppWrap = (Component, idName, classNames) =>
 
           {activeMenu ? (
             <div className="active_sidebar">
-              <Sidebar />
+              <OutsideAlerter>
+                <Sidebar />
+              </OutsideAlerter>
             </div>
           ) : (
             <div className="hidden_sidebar">
@@ -71,16 +73,17 @@ const AppWrap = (Component, idName, classNames) =>
 
           <div className={activeMenu ? "main_active" : "main_hidden"}>
             {/* NavBar */}
+
             <div className="nav_container">
-              <OutsideAlerter>
-                <NavBar />
-              </OutsideAlerter>
+              <NavBar />
             </div>
 
             {/* Settings Panel */}
             <AnimatePresence initial={false}>
               {themeSettings && (
-                <Settings toggle={toggleThemeChange} check={checked} />
+                <OutsideAlerter>
+                  <Settings toggle={toggleThemeChange} check={checked} />
+                </OutsideAlerter>
               )}
             </AnimatePresence>
 

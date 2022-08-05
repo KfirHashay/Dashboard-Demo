@@ -10,6 +10,7 @@ function useOutsideAlerter(ref) {
       if (ref.current && !ref.current.contains(event.target)) {
         handleClick("");
         setThemeSettings(false);
+        console.log("clicked1");
       }
       if (
         ref.current &&
@@ -17,6 +18,7 @@ function useOutsideAlerter(ref) {
         screenSize <= 1120
       ) {
         setActiveMenu(false);
+        console.log("clicked2");
       }
     }
     // Bind the event listener
