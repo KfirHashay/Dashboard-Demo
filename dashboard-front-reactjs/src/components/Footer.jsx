@@ -1,57 +1,58 @@
 import React from "react";
 
-import { AiFillLinkedin, FaGithub, CgWebsite } from ".";
+import { FaLinkedinIn, FaGithub, CgWebsite } from ".";
 
-import Tooltip from "./Tooltip";
+import { Tooltip } from ".";
 
 const Footer = () => (
   <div className="Footer">
     <p>
       © 2022 All rights reserved by Kfir H. <br />
-      Based on JavaMastery YouTube Course
+      Based on{" "}
+      <a
+        className="link hover-2"
+        href="https://www.youtube.com/watch?v=jx5hdo50a2M&t=1s"
+        target="_blank"
+        rel="noreferrer"
+      >
+        JavaMastery YouTube Course
+      </a>
     </p>
-    <ul className="ul">
-      <Tooltip content="Linkdin" position="top">
-        <li>
-          <a className="linkdin" href="/#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <i aria-hidden="true">
-              <AiFillLinkedin />
-            </i>
+    <div className="social-icons">
+      <div className="rounded-social-buttons">
+        <Tooltip content="Linkdin" position="top">
+          <a
+            className="social-button linkedin"
+            href="https://www.linkedin.com/in/kfir-hashay"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaLinkedinIn className="icon" />
           </a>
-        </li>
-      </Tooltip>
-      <Tooltip content="GitHub" position="top">
-        <li>
-          <a className="github" href="/#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <i aria-hidden="true">
-              <FaGithub />
-            </i>
-          </a>
-        </li>
-      </Tooltip>
-      <Tooltip content="Portfolio" position="top">
-        <li>
-          <a className="portfolio" href="/#">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+        </Tooltip>
 
-            <i aria-hidden="true">
-              <CgWebsite />
-            </i>
+        <Tooltip content="GitHub" position="top">
+          <a
+            className="social-button github"
+            href="https://github.com/KfirHashay"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <FaGithub className="icon" />
           </a>
-        </li>
-      </Tooltip>
-    </ul>
+        </Tooltip>
+        <Tooltip content="Portfolio" position="top">
+          <a
+            className="social-button instagram"
+            href="/#"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <CgWebsite className="icon" />
+          </a>
+        </Tooltip>
+      </div>
+    </div>
   </div>
 );
 

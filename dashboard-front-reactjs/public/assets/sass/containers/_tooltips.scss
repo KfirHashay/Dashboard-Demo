@@ -1,0 +1,23 @@
+#Tooltip {
+  /*   background: #EEE; */
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  color: rgb(255, 255, 255);
+  font: 16px;
+}
+
+.tooltip-Container {
+  text-align: center;
+}
+/*tooltip Box*/
+.con-tooltip {
+  position: relative;
+
+  border-radius: 9px;
+  padding: 20px;
+  margin: 10px;
+  display: inline-block;
+
+  cursor: pointer;
+}

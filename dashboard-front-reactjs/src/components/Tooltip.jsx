@@ -1,29 +1,96 @@
 import React, { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 
-const variants = {
+const Topvariants = {
   active: {
     opacity: 1,
+    top: -30,
     transition: {
-      duration: 0.2,
-      ease: "easeIn",
+      delay: 0,
+      duration: 0.4,
+      ease: "easeOut",
+      type: "spring",
     },
   },
   inactive: {
     opacity: 0,
+    top: -38,
+  },
+  exit: {
+    top: -38,
+    transition: { delay: 0.1, duration: 0.1, ease: "easeIn" },
+  },
+};
+
+const BotttomCentervariants = {
+  active: {
+    opacity: 1,
+    bottom: -30,
     transition: {
-      duration: 0.2,
+      delay: 0,
+      duration: 0.4,
+      ease: "easeOut",
+      type: "spring",
     },
+  },
+  inactive: {
+    opacity: 0,
+    bottom: -38,
+  },
+  exit: {
+    bottom: -38,
+    transition: { delay: 0.1, duration: 0.1, ease: "easeIn" },
+  },
+};
+
+const Rightvariants = {
+  active: {
+    opacity: 1,
+    left: 95,
+    transition: {
+      delay: 0,
+      duration: 0.4,
+      ease: "easeOut",
+      type: "spring",
+    },
+  },
+  inactive: {
+    opacity: 0,
+    left: 103,
+  },
+  exit: {
+    left: 103,
+    transition: { delay: 0.1, duration: 0.1, ease: "easeIn" },
+  },
+};
+const Leftvariants = {
+  active: {
+    opacity: 1,
+    right: 90,
+    transition: {
+      delay: 0,
+      duration: 0.4,
+      ease: "easeOut",
+      type: "spring",
+    },
+  },
+  inactive: {
+    opacity: 0,
+    right: 98,
+  },
+  exit: {
+    right: 98,
+    transition: { delay: 0.1, duration: 0.1, ease: "easeIn" },
   },
 };
 
 export const motionProps = {
-  variants: variants,
   initial: "inactive",
   animate: "active",
-  exit: "inactive",
+  exit: "exit",
 };
 
+export const varientsProps = {};
 const Tooltip = (props) => {
   let timeout;
   const [active, setActive] = useState(false);
@@ -50,8 +117,17 @@ const Tooltip = (props) => {
       <AnimatePresence initial={false}>
         {active && (
           <motion.div
+            {...(props.position === "top"
+              ? { variants: Topvariants }
+              : props.position === "bottom"
+              ? { variants: BotttomCentervariants }
+              : props.position === "right"
+              ? { variants: Rightvariants }
+              : props.position === "left"
+              ? { variants: Leftvariants }
+              : {})}
             {...motionProps}
-            className={`Tooltip-Tip ${props.direction || "top"}`}
+            className={`Tooltip-Tip ${props.position || "top"}`}
           >
             {/* Content */}
             {props.content}

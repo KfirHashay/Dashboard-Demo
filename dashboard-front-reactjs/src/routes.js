@@ -8,6 +8,7 @@ import {
   Employees,
   Customers,
   ResizeablePanel,
+  Tooltips,
   Calendar,
   Kanban,
   Editor,
@@ -33,6 +34,7 @@ const Routing = () => {
       <Route path="/employees" element={<Employees />} />
       <Route path="/customers" element={<Customers />} />
       <Route path="/Panel-demo" element={<ResizeablePanel />} />
+      <Route path="/tooltip-demo" element={<Tooltips />} />
 
       {/* apps  */}
       <Route path="/calendar" element={<Calendar />} />

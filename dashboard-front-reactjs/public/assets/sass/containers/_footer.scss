@@ -3,7 +3,7 @@
 
   font-family: "Poppins", sans-serif;
   place-items: center;
-  background: linear-gradient(315deg, #ffffff, #d7e1ec);
+
   margin-top: 6rem;
   p {
     margin-top: 1rem;
@@ -18,135 +18,126 @@
   }
 
   @include light {
-    background-color: rgb(250 251 251);
+    background: linear-gradient(315deg, #ffffff, #d7e1ec);
   }
   @include dark {
     background-color: rgb(32 35 42);
   }
 
-  ul {
+  .social-icons {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    display: inline-block;
     position: relative;
+  }
 
-    margin: 20px;
-    // left: 50%;
-    // transform: translate(-50%, -50%);
-    //margin: 0;
-    padding: 0;
-    display: flex;
+  .svg-inline--fa {
+    vertical-align: -0.2em;
   }
-  ul li {
-    list-style: none;
-  }
-  ul li a {
-    display: block;
-    position: relative;
-    width: 60px;
-    height: 60px;
-    line-height: 100px;
-    font-size: 40px;
+
+  .rounded-social-buttons {
     text-align: center;
-    text-decoration: none;
-    color: #404040;
-    margin: 0 30px;
-    transition: 0.5s;
   }
 
-  ul li i {
+  .rounded-social-buttons .social-button {
+    display: inline-block;
     position: relative;
-    bottom: 10px;
-  }
-  ul li a span {
-    position: absolute;
-    transition: transform 0.5s;
-  }
-  ul li a span:nth-child(1),
-  ul li a span:nth-child(3) {
-    width: 100%;
-    height: 3px;
-    background: #404040;
-  }
-  ul li a span:nth-child(1) {
-    top: 0;
-    left: 0;
-    transform-origin: right;
-  }
-  ul li a:hover span:nth-child(1) {
-    transform: scaleX(0);
-    transform-origin: left;
-    transition: transform 0.5s;
+    cursor: pointer;
+    width: 3.125rem;
+    height: 3.125rem;
+    border: 0.125rem solid transparent;
+    padding: 0;
+    text-decoration: none;
+    text-align: center;
+    color: #fefefe;
+    font-size: 1.5625rem;
+    font-weight: normal;
+    line-height: 2em;
+    border-radius: 1.6875rem;
+    transition: all 0.5s ease;
+    margin: 8px;
   }
 
-  ul li a span:nth-child(3) {
-    bottom: 0;
-    left: 0;
-    transform-origin: left;
-  }
-  ul li a:hover span:nth-child(3) {
-    transform: scaleX(0);
-    transform-origin: right;
-    transition: transform 0.5s;
+  .rounded-social-buttons .social-button:hover,
+  .rounded-social-buttons .social-button:focus {
+    -webkit-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 
-  ul li a span:nth-child(2),
-  ul li a span:nth-child(4) {
-    width: 3px;
-    height: 100%;
-    background: #404040;
-  }
-  ul li a span:nth-child(2) {
-    top: 0;
-    left: 0;
-    transform: scale(0);
-    transform-origin: bottom;
-  }
-  ul li a:hover span:nth-child(2) {
-    transform: scale(1);
-    transform-origin: top;
-    transition: transform 0.5s;
-  }
-  ul li a span:nth-child(4) {
-    top: 0;
-    right: 0;
-    transform: scale(0);
-    transform-origin: top;
-  }
-  ul li a:hover span:nth-child(4) {
-    transform: scale(1);
-    transform-origin: bottom;
-    transition: transform 0.5s;
+  .rounded-social-buttons .icon {
+    font-size: 22px;
   }
 
-  .linkdin:hover {
-    color: #0e76a8;
+  .rounded-social-buttons .social-button.twitter {
+    background: #55acee;
   }
-  .linkdin:hover span {
-    background: #0e76a8;
+
+  .rounded-social-buttons .social-button.twitter:hover,
+  .rounded-social-buttons .social-button.twitter:focus {
+    color: #55acee;
+    background: #fefefe;
+    border-color: #55acee;
   }
-  .github:hover {
-    color: #171515;
+
+  .rounded-social-buttons .social-button.linkedin {
+    background: #007bb5;
   }
-  .github:hover span {
-    background: #171515;
+
+  .rounded-social-buttons .social-button.linkedin:hover,
+  .rounded-social-buttons .social-button.linkedin:focus {
+    color: #007bb5;
+    background: #fefefe;
+    border-color: #007bb5;
   }
-  .portfolio:hover {
-    color: #4c8bf5;
+
+  .rounded-social-buttons .social-button.github {
+    background: #333;
   }
-  .portfolio:hover span {
-    background: #4c8bf5;
+
+  .rounded-social-buttons .social-button.github:hover,
+  .rounded-social-buttons .social-button.github:focus {
+    color: #333;
+    background: #fefefe;
+    border-color: #333;
   }
-  .google:hover {
-    color: #dd4b39;
+
+  .rounded-social-buttons .social-button.instagram {
+    background: #6e5494;
   }
-  .google:hover span {
-    background: #dd4b39;
+
+  .rounded-social-buttons .social-button.instagram:hover,
+  .rounded-social-buttons .social-button.instagram:focus {
+    color: #6e5494;
+    background: #fefefe;
+    border-color: #6e5494;
   }
-  ul li a .github {
-    color: #171515;
+
+  .link {
+    display: inline-block;
+    position: relative;
+    text-decoration: none;
+    padding: 10px 0;
   }
-  ul li a:hover:nth-child(3) {
-    color: #c32aa3;
-  }
-  ul li a:hover:nth-child(4) {
-    color: #dd4b39;
+  .hover-2 {
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 2px;
+      transform: scaleX(0);
+      background-color: gray;
+
+      transition: transform 0.3s;
+    }
+
+    &:hover {
+      &:after {
+        transform: scaleX(1);
+      }
+    }
   }
 }

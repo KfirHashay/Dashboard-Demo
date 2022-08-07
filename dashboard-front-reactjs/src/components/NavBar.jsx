@@ -5,15 +5,14 @@ import {
   RiNotification3Line,
   MdKeyboardArrowDown,
 } from ".";
-
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { Tooltip } from "../components";
 import { useStateContext } from "../context/ContextProvider";
 
 import { Chat, Notification, UserProfile } from ".";
 import avatar from "../data/avatar.jpg";
 
 const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
-  <TooltipComponent content={title} position="BottomCenter">
+  <Tooltip content={title} position="bottom">
     <button
       type="button"
       onClick={() => customFunc()}
@@ -23,7 +22,7 @@ const NavButton = ({ title, customFunc, icon, color, dotColor }) => (
       <span style={{ background: dotColor }} className="navBtnSpan" />
       {icon}
     </button>
-  </TooltipComponent>
+  </Tooltip>
 );
 
 const NavBar = () => {
@@ -83,7 +82,7 @@ const NavBar = () => {
           icon={<RiNotification3Line />}
         />
 
-        <TooltipComponent content="Profile" position="BottomCenter">
+        <Tooltip content="Profile" position="bottom">
           <div
             className="ProfileBtn"
             onClick={() => handleClick("userProfile")}
@@ -93,9 +92,9 @@ const NavBar = () => {
               <span className="span-1">Hi,</span>
               <span className="span-2">Michael</span>
             </p>
-            <MdKeyboardArrowDown className="span-1" />
+            <MdKeyboardArrowDown style={{ color: "rgb(156 163 175)" }} />
           </div>
-        </TooltipComponent>
+        </Tooltip>
 
         {isClicked.chat && <Chat />}
         {isClicked.notification && <Notification />}

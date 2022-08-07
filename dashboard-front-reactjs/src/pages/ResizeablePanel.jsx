@@ -16,6 +16,13 @@ function ResizeablePanel() {
       <div className="Container">
         <Header category="Page" title="Resizeable Panel" />
         <div className="Panel-Container">
+          {" "}
+          <div className="other">
+            <p>
+              a Resizeable Panel animation, using react state, that is not
+              triggerd by re - render.
+            </p>
+          </div>
           <div className="Panel">
             <h1>Panel</h1>
             <div className="buttons">
@@ -42,16 +49,6 @@ function ResizeablePanel() {
                 <p>Something short.</p>
               )}
             </ResizablePanel>
-          </div>
-
-          <div className="other">
-            <p>
-              Some other content. Lorem ipsum dolor, sit amet consectetur
-              adipisicing elit. Eveniet distinctio voluptatum dolore, nobis
-              debitis sequi error nisi! Eveniet consectetur consequatur, vero
-              sint doloribus ducimus laudantium officiis nam recusandae soluta
-              aliquam?
-            </p>
           </div>
         </div>
       </div>

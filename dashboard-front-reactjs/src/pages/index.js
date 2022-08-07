@@ -3,6 +3,7 @@ export { default as Orders } from "./Orders";
 export { default as Employees } from "./Employees";
 export { default as Customers } from "./Customers";
 export { default as ResizeablePanel } from "./ResizeablePanel";
+export { default as Tooltips } from "./Tooltips";
 
 export { default as Calendar } from "./Calendar";
 export { default as Kanban } from "./Kanban";

@@ -23,6 +23,8 @@ import {
   BsCurrencyDollar,
   BsShield,
   BsChatLeft,
+  BsTextareaResize,
+  BsChatSquareDots,
 } from "react-icons/bs";
 
 import { BiColorFill } from "react-icons/bi";
@@ -533,7 +535,11 @@ export const links = [
       },
       {
         name: "Panel-demo",
-        icon: <RiContactsLine />,
+        icon: <BsTextareaResize />,
+      },
+      {
+        name: "tooltip-demo",
+        icon: <BsChatSquareDots />,
       },
     ],
   },

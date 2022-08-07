@@ -4,7 +4,7 @@ import { useStateContext } from "../context/ContextProvider";
 
 import { AnimatePresence } from "framer-motion";
 import { FiSettings } from "react-icons/fi";
-import { TooltipComponent } from "@syncfusion/ej2-react-popups";
+import { Tooltip } from "../components";
 import { OutsideAlerter } from "../components";
 
 import { Sidebar, NavBar, Settings, Footer } from "../components";
@@ -45,7 +45,7 @@ const AppWrap = (Component, idName, classNames) =>
         <>
           {/* Settings Btn */}
           <div className="settings" style={{ zIndex: "1000" }}>
-            <TooltipComponent content="Settings" position="Top">
+            <Tooltip content="Settings" position="top">
               <button
                 type="button"
                 onClick={() => setThemeSettings(true)}
@@ -54,7 +54,7 @@ const AppWrap = (Component, idName, classNames) =>
               >
                 <FiSettings />
               </button>
-            </TooltipComponent>
+            </Tooltip>
           </div>
 
           {/* SideBar */}
